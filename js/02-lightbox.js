@@ -17,17 +17,8 @@ const imagesArray = galleryItems.map(
 
 gallery.insertAdjacentHTML("beforeend", imagesArray.join(""));
 
-gallery.addEventListener("click", showBigImage);
-
-function showBigImage(event) {
-  //zablokować domyślne zachowanie
-  event.preventDefault();
-  // sprawdzanie czy kliknięcie jest na img
-  //   if (event.target.nodeName !== "IMG") return;
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionPosition: "top",
-    captionDelay: 250,
-  });
-  console.log(event.target.alt);
-}
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionPosition: "top",
+  captionDelay: 250,
+});
