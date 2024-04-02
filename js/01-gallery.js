@@ -19,8 +19,8 @@ gallery.addEventListener("click", (ev) => {
   instance.show();
 
   //zamknięcie na escape
-  const closeLightboxOnEscape = (event) => {
-    if (event.key === "Escape") {
+  const closeLightboxOnEscape = (ev) => {
+    if (ev.key === "Escape") {
       instance.close();
       document.removeEventListener("keydown", closeLightboxOnEscape);
     }
